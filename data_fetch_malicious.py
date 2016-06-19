@@ -23,7 +23,7 @@ try:
 	savefile_obj=csv.writer(savefile)
 	#savefile_obj.writerow(['URL','Lable'])
 
-	for i in range(190,201):
+	for i in range(250):
 		values={'page':str(i),'valid':'y','active':'all','Search':'Search'}
 		data=prs.urlencode(values)
 		data=data.encode('utf-8')
