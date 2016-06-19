@@ -65,25 +65,25 @@ Python script to generate the following figure/plots of the training dataset to 
 
 ####	Fig-1.png
 The image shows the URL length Distributions of both Malicious as well as Benign URLs.
-![URL Length Distribution](https://github.com/Anmol-Sharma/URL_CLASSIFICATION_SYSTEM/Fig-1.png)
+![URL Length Distribution](https://github.com/Anmol-Sharma/URL_CLASSIFICATION_SYSTEM/blob/master/Fig-1.png)
 
 
 ####	Fig-2.png
 The image shows the Number of Dots Distributions of both Malicious as well as Benign URLs.
 
-![No of Dots Distribution](https://github.com/Anmol-Sharma/URL_CLASSIFICATION_SYSTEM/Fig-2.png)
+![No of Dots Distribution](https://github.com/Anmol-Sharma/URL_CLASSIFICATION_SYSTEM/blob/master/Fig-2.png)
 
 
-####	Fig-1.png
+####	Fig-3.png
 The image shows the scatter plot of Total Dots vs Total Delimeters in File name in a given URL.
 
-![Scatter Plot]	(https://github.com/Anmol-Sharma/URL_CLASSIFICATION_SYSTEM/Fig-3.png)
+![Scatter Plot]	(https://github.com/Anmol-Sharma/URL_CLASSIFICATION_SYSTEM/blob/master/Fig-3.png)
 
 
-####	Fig-1.png
+####	Fig-4.png
 The image show the Domain length Distributions of both Malicious as well as Benign URLs.
 
-![Domain Length Distribution](https://github.com/Anmol-Sharma/URL_CLASSIFICATION_SYSTEM/Fig-4.png)
+![Domain Length Distribution](https://github.com/Anmol-Sharma/URL_CLASSIFICATION_SYSTEM/blob/master/Fig-4.png)
 
 ###	Machine Learning/Data Processing Scripts
 
