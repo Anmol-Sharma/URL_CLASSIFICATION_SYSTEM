@@ -1,7 +1,5 @@
 import numpy as np
 import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
 import Vector_creator as Vc
 import pickle
 import time
@@ -36,23 +34,9 @@ print('all done feature values for training set obtained')
 #print('\n\n\n',training_df.head(2))
 #print(len_URL)	
 
-sns.set_style("darkgrid")
-color = sns.color_palette()[2]
-"""sns.distplot(training_df[training_df['Lable']==0]['path token count'],color=color)
-sns.plt.title('Path Token count Distribution(Benign URLs)')
-plt.ylabel('Count')
-sns.plt.show()
-sns.jointplot(x='no of dots',y='no of hyphens in dom',data=training_df[training_df['Lable']==0])
-sns.plt.title('Dots vs Domain Hyphens(Benign URLs)')
-sns.jointplot(x='no of dots',y='no of hyphens in dom',data=training_df[training_df['Lable']==1],color=color)
-sns.plt.title('Dots vs Domain Hyphens(Malicious URLs)')
-sns.plt.show()"""
 
 print('\n\n==========================================================')
 print('\nStarting to dump Training Data')
 print('==========================================================\n\n')
 pickle.dump(training_df,open('Training_Data.pkl','wb'))
 print('All Done')
-
-#plt.scatter(training_df[ training_df['Lable']==1 ]['len of url'].values,training_df[ training_df['Lable']==1 ]['domain len'].values,marker='x')
-#plt.show()
