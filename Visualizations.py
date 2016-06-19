@@ -1,9 +1,3 @@
-"""import Vector_creator as Vc
-
-while True:
-	lnk=input('Enter URL:\n')
-	output=Vc.Construct_Vector(lnk)"""
-
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
@@ -43,14 +37,14 @@ plt.legend()
 sns.plt.show()"""
 
 
-graph=sns.jointplot(x='len of url',y='domain len',color='r',data=train_data[train_data['Lable']==1 ],marker='v',label='Malicious URLs',xlim=(0,130))
+"""graph=sns.jointplot(x='len of url',y='domain len',color='r',data=train_data[train_data['Lable']==1 ],marker='v',label='Malicious URLs',xlim=(0,130))
 graph.x=train_data[train_data['Lable']==0 ]['len of url']
 graph.y=train_data[train_data['Lable']==0 ]['domain len']
 graph.plot_joint(plt.scatter,marker='x',c='b',s=50,label='Benign URLs')
 plt.xlabel('Length of URL')
 plt.ylabel('Domain Length')
 plt.legend()
-sns.plt.show()
+sns.plt.show()"""
 
 """sns.set(style="darkgrid")
 sns.distplot(train_data[train_data['Lable']==0]['domain len'],color='blue',label='Benign URLs')
