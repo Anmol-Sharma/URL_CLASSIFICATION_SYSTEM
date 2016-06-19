@@ -7,7 +7,7 @@ URL problem are manually constructed lists in which all malicious web page`s URL
 well as users systems that analyze the content or behavior of a Web site as it is visited.
 
 The disadvantage of _Blacklisting_ approach is that we have to do the tedious task of searching the list for
-presence of the entry. And the list can be very large considering the amount of web pages of the Internet.
+presence of the entry. And the list can be very large considering the amount of web sites on the Internet.
 Also the list cannot be kept upto date because of the evergrowing growth of web link each and every hour.
 
 In the given System we are using **Machine-Learning** techniques to classify a URL as either **Safe** or **Unsafe** in _Real Time_ without even the need to download the webpage.
@@ -25,11 +25,20 @@ The system is presently working only on **Lexical** features(Simple text feature
 *	Presence of Security Sensitive Words in URL
 
 and many more(around 22 total). The Host Based Features like country code in which site is hosted, creation date, updation date etc. are still yet to be added to the system and increase accuracy of the classifier but increase the _Latency time_ in classifying the URL as we have to query **WHOIS** servers in order to come up with the Host Based Features.
-For this query purpose the PyWhois module has been used.
+For this query purpose the **PyWhois** module has been used.
+
+##  About Dataset
+For this given system we are using two sources to collect our data,namely:
+
+####  Dmoz Open Directory
+We are using the [Dmoz Open Directory] (https://www.dmoz.org/) to collect URLs of Benign Websites of different types.
+
+####  Phishtank.com
+For the malicious URLs we are collecting data from [Phishtank] (https://www.phishtank.com/).
 
 ## Files and Information Related to them
 
-### Data Extraction/Data Munging Files
+### _Data Extraction/Data Munging Files_
 
 #####	data_fetch_benign.py
 This python script will extract the list of URLs from a given page of DMOZ Open Directory relating to a given category. Enter the URL of DMOZ's web page and it will extract the enlisted links and write them to respective csv file.
@@ -40,7 +49,7 @@ This python script iteratively extracts the list of phishing urls from Phistank.
 #####	contruct_dataset.py
 This file reads a certain amount of data from malicious dataset file and certain from benign dataset file and uses random shuffling to create training dataset file.
 
-### Data Set Files
+### _Data Set Files_
 
 #####	bening_url.csv
 
@@ -59,7 +68,7 @@ File constructed after random shuffling of URLs from both Malicious and Benign U
 
 Binary File containing the feature values computed on training dataset URLs
 
-###	Visualizations
+###	_Visualizations_
 
 #####	Visualizations.py
 Python script to generate the following figure/plots of the training dataset to gain insight of type of features we can exploit to get better results from our algorithm
@@ -86,7 +95,7 @@ The image show the Domain length Distributions of both Malicious as well as Beni
 
 ![Domain Length Distribution](https://github.com/Anmol-Sharma/URL_CLASSIFICATION_SYSTEM/blob/master/Fig-4.png)
 
-###	Machine Learning/Data Processing Scripts
+###	_Machine Learning/Data Processing Scripts_
 
 #####	Vector_Creator.py
 Python script to extract features values from a given URL and return it as a list.
