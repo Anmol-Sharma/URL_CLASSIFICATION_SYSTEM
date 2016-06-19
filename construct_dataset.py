@@ -24,7 +24,8 @@ while True:
 		temp.append(ran)
 		train.write(data[ran])
 		count+=1
+
 train.close()
 malicious.close()
 benign.close()
-print('Total Items writen are : %d'%count)
+print('Total Items writen are : %d'%(count))
