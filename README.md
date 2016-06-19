@@ -44,7 +44,7 @@ For the malicious URLs we are collecting data from [Phishtank] (https://www.phis
 This python script will extract the list of URLs from a given page of DMOZ Open Directory relating to a given category. Enter the URL of DMOZ's web page and it will extract the enlisted links and write them to respective csv file.
 
 #####	data_fetch_malicious.py
-This python script iteratively extracts the list of phishing urls from Phistank.com iteratively and write those links to the respective csv file.
+This python script iteratively extracts the list of phishing urls from Phistank.com and write those links to the respective csv file.
 
 #####	contruct_dataset.py
 This file reads a certain amount of data from malicious dataset file and certain from benign dataset file and uses random shuffling to create training dataset file.
@@ -104,4 +104,4 @@ Python script to extract features values from a given URL and return it as a lis
 Python script to produce training dataset after doing feature extraction and storing it in a binary file named Training_Data.pkl as defined above.
 
 #####	Testing_Phase.py
-Python script which take as input a url and then classify it where Safe or Unsafe after training the algorith on the training dataset values.
+Python script which take as input a url and then classify it where Safe or Unsafe after training the algorithm on the training dataset values.
