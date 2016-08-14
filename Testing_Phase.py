@@ -15,8 +15,18 @@ Target_labels=train_data['Lable'].values
 train_data=train_data.drop(['URL','Lable'],axis=1)
 print(train_data.info())
 predictor=train_data.values
+print('\n\n===========================================================')
+print('\nStarting to Train the Classifier\n')
+print('===========================================================\n\n')
 model.fit(predictor,Target_labels)
 model.score(predictor,Target_labels)
+print('\n\n===========================================================')
+print('\nDone Training the Classifier\n')
+print('===========================================================\n\n')
+
+print('\n\n===========================================================')
+print('\nEnter URLs to Test the Classifier\n')
+print('===========================================================\n\n')
 while True:
 	url=input('\nEnter URL:\n')
 	if url=='':

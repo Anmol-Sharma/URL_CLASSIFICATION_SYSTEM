@@ -53,3 +53,11 @@ sns.plt.title('Domain Length Distribution')
 plt.legend(loc='upper right')
 plt.xlabel('Length of Domain/Host')
 sns.plt.show()"""
+
+"""sns.set(style="whitegrid")
+sns.distplot(train_data[train_data['Lable']==0]['create_age(months)'],color='green',label='Benign URLs')
+sns.distplot(train_data[train_data['Lable']==1]['create_age(months)'],color='red',label='Malicious URLs')
+sns.plt.title('Creation Age Distribution')
+plt.legend(loc='upper right')
+plt.xlabel('Age of Domain (Months)')
+sns.plt.show()"""
