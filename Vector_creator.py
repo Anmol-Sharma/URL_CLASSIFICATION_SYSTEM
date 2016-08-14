@@ -1,4 +1,12 @@
+"""
+
+"""
 import re
+import requests
+import http.client
+import urllib
+import whois
+import datetime
 
 Suspicious_Words=['secure','account','update','banking','login','click','confirm','password','verify','signin','ebayisapi','lucky','bonus']
 Suspicious_TLD=['zip','cricket','link','work','party','gq','kim','country','science','tk']
@@ -53,7 +61,7 @@ def Construct_Vector(mystr):
 	patt_path=r'/[^/]*'									#pattern to extract path of URL
 	dom=re.match(patt,removed_protocol).group(0)
 	info=re.findall(patt_path,removed_protocol)
-	##print('Domain Name: ',dom)
+	####print('Domain Name: ',dom)
 	doma_hyph_count=no_of_hyphens_in_domain(dom)
 	vec.append(int(doma_hyph_count))					#Number of hyphens in Domain of URL
 	domain_Tokens=(dom).split('.')
@@ -190,4 +198,88 @@ def Construct_Vector(mystr):
 		#print('Maximun no of delims:',0)
 	#vec=np.array(l)
 	#print('Current Vector Values :', vec)
+
+
+	###########Extracting Host Based Features Now
+
+	avg_month_time=365.2425/12.0
+	while(True):
+		if(not dom[-1].isalnum()):
+			dom=dom[:-1]
+		else:
+			break
+	try:
+		who_info=whois.whois(dom)
+	except Exception:
+		vec.append(-1)									### created age in months
+		vec.append(-1)									### expiry age in months
+		vec.append(-1)									### updated age in days
+		vec.append(-1)									### zip code
+		return vec
+
+	if(who_info.creation_date == None and who_info.expiration_date == None and who_info.updated_date == None and who_info.zipcode == None):
+		vec.append(-1)									### created age in months
+		vec.append(-1)									### expiry age in months
+		vec.append(-1)									### updated age in days
+		vec.append(-1)									### zip code
+		return vec
+
+	if(who_info.creation_date==None or type(who_info.creation_date) is str):
+		vec.append(-1)
+	else:
+		if(type(who_info.creation_date) is list): 
+			create_date=who_info.creation_date[-1]
+		else:
+			create_date=who_info.creation_date
+		if(type(create_date) is datetime.datetime):
+			today_date=datetime.datetime.now()
+			create_age_in_mon=((today_date - create_date).days)/avg_month_time
+			create_age_in_mon=round(create_age_in_mon)
+			vec.append(create_age_in_mon)					#### appending created age in months
+		else:
+			vec.append(-1)
+
+	if(who_info.expiration_date==None or type(who_info.expiration_date) is str):
+		vec.append(-1)
+	else:
+		if(type(who_info.expiration_date) is list):
+			expiry_date=who_info.expiration_date[-1]
+		else:
+			expiry_date=who_info.expiration_date
+		if(type(expiry_date) is datetime.datetime):
+			today_date=datetime.datetime.now()
+			expiry_age_in_mon=((expiry_date - today_date).days)/avg_month_time
+			expiry_age_in_mon=round(expiry_age_in_mon)
+			vec.append(expiry_age_in_mon)					#### appending expiry age in months
+		else:
+			vec.append(-1)
+
+	if(who_info.updated_date==None or type(who_info.updated_date) is str):
+		vec.append(-1)		
+	else:
+		if(type(who_info.updated_date) is list):
+			update_date=who_info.updated_date[-1]
+		else:
+			update_date=who_info.updated_date
+		if(type(update_date) is datetime.datetime):
+			today_date=datetime.datetime.now()
+			update_age_in_days=((today_date - update_date).days)
+			vec.append(update_age_in_days)					#### appending updated age in days
+		else:
+			vec.append(-1)
+
+
+	zipcode=who_info.zipcode
+	if(zipcode == None or (type(zipcode) is not str)):
+		zipcode=-1
+	else:
+		if '-' in zipcode:
+			zipcode=re.sub('-*','',zipcode)
+		zipcode=re.sub(r'[A-Za-z\s]*','',zipcode)
+
+	if(type(zipcode) is str and zipcode.isdigit()):
+		vec.append(int(zipcode))							####appending zipcode
+	else:
+		zipcode=-1
+		vec.append(zipcode)
 	return vec
