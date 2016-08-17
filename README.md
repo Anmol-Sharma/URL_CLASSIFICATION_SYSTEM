@@ -102,9 +102,6 @@ The image show the Domain length Distributions of both Malicious as well as Beni
 
 ###	_Machine Learning/Data Processing Scripts_
 
-#####	contruct_dataset.py
-This file reads a certain amount of data from malicious dataset file and certain from benign dataset file and uses random shuffling to create training dataset file.
-
 #####	Vector_Creator.py
 Python script to extract features values from a given URL and return it as a list.
 
