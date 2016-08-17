@@ -45,7 +45,6 @@ This python script will extract the list of URLs from a given page of DMOZ Open 
 
 #####	data_fetch_malicious.py
 This python script iteratively extracts the list of phishing urls from Phistank.com and write those links to the respective csv file.
-<<<<<<< HEAD
 
 #####	contruct_dataset.py
 This file reads a certain amount of data from malicious dataset file and certain from benign dataset file and uses random shuffling to create training dataset file.
@@ -103,6 +102,9 @@ The image show the Domain length Distributions of both Malicious as well as Beni
 
 ###	_Machine Learning/Data Processing Scripts_
 
+#####	contruct_dataset.py
+This file reads a certain amount of data from malicious dataset file and certain from benign dataset file and uses random shuffling to create training dataset file.
+
 #####	Vector_Creator.py
 Python script to extract features values from a given URL and return it as a list.
 
@@ -114,65 +116,4 @@ Python script which take as input a url and then classify it where Safe or Unsaf
 
 #####	NN_implementation.py
 Python script which take as input a url and then classify it where Safe or Unsafe after training the algorithm on the training dataset values using Neural Network Classifier with One Hidden Layer and one Output Unit.
-=======
 
-#####	contruct_dataset.py
-This file reads a certain amount of data from malicious dataset file and certain from benign dataset file and uses random shuffling to create training dataset file.
-
-### _Data Set Files_
-
-#####	bening_url.csv
-
-This file contains the list of Benign( i.e. Non-Malicious URLs) in a comma separated file along with Label 0 specifying them as Non-Spam. This data is collected from DMOZ open Directory.
-
-#####	malicious_url.csv
-
-This file contains the list of Malicious URLs in a comma separated file along with Label 1 specifying them as Spam.
-This data is collected from Phishtank.com .
-
-#####	train_dataset.csv
-
-File constructed after random shuffling of URLs from both Malicious and Benign URLs.
-
-#####	Training_Data.pkl
-
-Binary File containing the feature values computed on training dataset URLs
-
-###	_Visualizations_
-
-#####	Visualizations.py
-Python script to generate the following figure/plots of the training dataset to gain insight of type of features we can exploit to get better results from our algorithm
-
-#####	Fig-1.png
-The image shows the URL length Distributions of both Malicious as well as Benign URLs.
-![URL Length Distribution](https://github.com/Anmol-Sharma/URL_CLASSIFICATION_SYSTEM/blob/master/Fig-1.png)
-
-
-#####	Fig-2.png
-The image shows the Number of Dots Distributions of both Malicious as well as Benign URLs.
-
-![No of Dots Distribution](https://github.com/Anmol-Sharma/URL_CLASSIFICATION_SYSTEM/blob/master/Fig-2.png)
-
-
-#####	Fig-3.png
-The image shows the scatter plot of Total Dots vs Total Delimeters in File name in a given URL.
-
-![Scatter Plot]	(https://github.com/Anmol-Sharma/URL_CLASSIFICATION_SYSTEM/blob/master/Fig-3.png)
-
-
-#####	Fig-4.png
-The image show the Domain length Distributions of both Malicious as well as Benign URLs.
-
-![Domain Length Distribution](https://github.com/Anmol-Sharma/URL_CLASSIFICATION_SYSTEM/blob/master/Fig-4.png)
-
-###	_Machine Learning/Data Processing Scripts_
-
-#####	Vector_Creator.py
-Python script to extract features values from a given URL and return it as a list.
-
-#####	training_Phase.py
-Python script to produce training dataset after doing feature extraction and storing it in a binary file named Training_Data.pkl as defined above.
-
-#####	Testing_Phase.py
-Python script which take as input a url and then classify it where Safe or Unsafe after training the algorithm on the training dataset values.
->>>>>>> 0e410b056839eee5e28f042c2f5e8efb2abc8800
