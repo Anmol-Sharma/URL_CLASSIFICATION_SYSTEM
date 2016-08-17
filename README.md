@@ -24,11 +24,7 @@ The system is presently working only on **Lexical** features(Simple text feature
 *	Presence of Ip Address in Host Name
 *	Presence of Security Sensitive Words in URL
 
-<<<<<<< HEAD
-and many more(around 22 total). The Host Based Features like country code in which site is hosted, creation date, updation date etc. have been added to the system and increase accuracy of the classifier but increase the _Latency time_ in classifying the URL as we have to query **WHOIS** servers in order to come up with the Host Based Features.
-=======
 and many more(around 22 total). The Host Based Features like country code in which site is hosted, creation date, updation date etc. are still yet to be added to the system and increase accuracy of the classifier but increase the _Latency time_ in classifying the URL as we have to query **WHOIS** servers in order to come up with the Host Based Features.
->>>>>>> 0e410b056839eee5e28f042c2f5e8efb2abc8800
 For this query purpose the **PyWhois** module has been used.
 
 ##  About Dataset
