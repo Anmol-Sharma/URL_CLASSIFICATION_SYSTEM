@@ -1,4 +1,8 @@
+"""
+This Module is the Neural Network Implementation of the Classfier using Tensorflow Learning API
+"""
 import numpy as np
+## Importing TensorFlow API
 import tensorflow as tf
 import pickle as pkl
 import Vector_creator as Vc
@@ -9,8 +13,8 @@ print('\n\n===========================================================')
 print('\nReading of Training Phase Done\n')
 print('===========================================================\n\n')
 
-y_train=train_data['Lable'].values
-x_data=train_data.drop(['URL','Lable'],axis=1).values
+y_train=train_data['Lable'].values						#### Stroring Training Lables 
+x_data=train_data.drop(['URL','Lable'],axis=1).values	#### Droping Unecessary Columns from the Data Fram
 
 classifier=tf.contrib.learn.DNNClassifier(hidden_units=[10],n_classes=2)
 
@@ -35,6 +39,7 @@ while True:
 	vec=vec.reshape(1,-1)
 	predicted=classifier.predict(vec)
 	if predicted:
-		print('\n\aMalicious Link Ahead')
+		### if True
+		print('\n\aLooks like a Malicious Link Ahead')
 	else:
-		print('\nSafe Link')
+		print('\nLooks like a Safe Link')

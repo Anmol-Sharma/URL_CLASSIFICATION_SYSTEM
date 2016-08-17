@@ -1,9 +1,17 @@
+"""
+This Module Generates Visualization on the information on the Training Dataset.
+Different Plots are generated below and commented out.
+To Generate any plot Just Uncomment the code for the Given Plot
+"""
+
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
 import pickle as pkl
 
+###Opening Training Training Dataset file to read values
 train_data=pkl.load(open('Training_Data.pkl','rb'))
+#### Printing the information of the Dataframe
 print(train_data.info())
 
 """sns.set(style="darkgrid")
