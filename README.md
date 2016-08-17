@@ -96,7 +96,7 @@ The image show the Domain length Distributions of both Malicious as well as Beni
 ![Domain Length Distribution](https://github.com/Anmol-Sharma/URL_CLASSIFICATION_SYSTEM/blob/master/Fig-4.png)
 
 #####	Fig-5.png
-The image show the Domain length Distributions of both Malicious as well as Benign URLs.
+The image show the Creation Age Distributions of both Malicious as well as Benign URLs.
 
 ![Domain Length Distribution](https://github.com/Anmol-Sharma/URL_CLASSIFICATION_SYSTEM/blob/master/Fig-5.png)
 
