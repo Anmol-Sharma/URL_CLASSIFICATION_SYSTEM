@@ -12,10 +12,11 @@ Also the list cannot be kept upto date because of the evergrowing growth of web 
 
 In the given System we are using **Machine-Learning** techniques to classify a URL as either **Safe** or **Unsafe** in _Real Time_ without even the need to download the webpage.
 
-The two main Algorithms we are using in this system are :
+The three main Algorithms we are using in this system are :
 
 *	[Random Forest] (https://en.wikipedia.org/wiki/Random_forest)
 *	[Logistic Regression] (https://en.wikipedia.org/wiki/Logistic_regression)
+*	[Neural Networks] (https://en.wikipedia.org/wiki/Artificial_neural_network)
 
 The system is presently working only on **Lexical** features(Simple text features of a URL) which includes:
 
@@ -96,7 +97,7 @@ The image show the Domain length Distributions of both Malicious as well as Beni
 ![Domain Length Distribution](https://github.com/Anmol-Sharma/URL_CLASSIFICATION_SYSTEM/blob/master/Fig-4.png)
 
 #####	Fig-5.png
-The image show the Domain length Distributions of both Malicious as well as Benign URLs.
+The image show the Creation Age Distributions of both Malicious as well as Benign URLs.
 
 ![Domain Length Distribution](https://github.com/Anmol-Sharma/URL_CLASSIFICATION_SYSTEM/blob/master/Fig-5.png)
 
