@@ -1,5 +1,9 @@
 # URL CLASSIFICATION SYSTEM
 
+**Note!!!** : This codebase is extremely outdated & old. I created this back in 2016 so it might happen that it might not execute. You can use the idea or template to build upon but mostly likely the code will not execute.
+
+
+
 Malicious Web sites are a cornerstone of Internet criminal activities.
 These Web sites contain various unwanted content such as spam-advertised products, phishing sites, dangerous "drive-by"
 harness that infect a visitor's system with malware. The most influential approaches to the malicious
@@ -14,9 +18,9 @@ In the given System we are using **Machine-Learning** techniques to classify a U
 
 The three main Algorithms we are using in this system are :
 
-*	[Random Forest] (https://en.wikipedia.org/wiki/Random_forest)
-*	[Logistic Regression] (https://en.wikipedia.org/wiki/Logistic_regression)
-*	[Neural Networks] (https://en.wikipedia.org/wiki/Artificial_neural_network)
+*	[Random Forest](https://en.wikipedia.org/wiki/Random_forest)
+*	[Logistic Regression](https://en.wikipedia.org/wiki/Logistic_regression)
+*	[Neural Networks](https://en.wikipedia.org/wiki/Artificial_neural_network)
 
 The system is presently working only on **Lexical** features(Simple text features of a URL) which includes:
 
