@@ -1,6 +1,6 @@
 # URL CLASSIFICATION SYSTEM
 
-**Note!!!** : This codebase is extremely outdated & old. I created this back in 2016 so it might happen that it might not execute. You can use the idea or template to build your own implementation.
+**Note!!!** : This codebase is extremely outdated & old. I created this back in 2016 so it might happen that it might not execute. Also the sources from which I extracted the data from might not exist anymore. You can use the idea or template to build your own implementation & extract data from a different souce.
 
 
 
@@ -36,10 +36,10 @@ For this query purpose the **PyWhois** module has been used.
 For this given system we are using two sources to collect our data,namely:
 
 ####  Dmoz Open Directory
-We are using the [Dmoz Open Directory] (https://www.dmoz.org/) to collect URLs of Benign Websites of different types.
+We are using the [Dmoz Open Directory](https://www.dmoz.org/) to collect URLs of Benign Websites of different types.
 
 ####  Phishtank.com
-For the malicious URLs we are collecting data from [Phishtank] (https://www.phishtank.com/).
+For the malicious URLs we are collecting data from [Phishtank](https://www.phishtank.com/).
 
 ## Files and Information Related to them
 
